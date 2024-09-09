@@ -1,5 +1,7 @@
 build/
 
+keypair.json
+
 # Logs
 logs
 *.log

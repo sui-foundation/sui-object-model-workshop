@@ -1,0 +1,22 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "init-keypair": "ts-node src/init.ts",
+    "create-vault": "ts-node src/createVault.ts",
+    "list-vaults": "ts-node src/listVaults.ts",
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@mysten/sui": "^1.8.0",
+    "dotenv": "^16.4.5"
+  }
+}
