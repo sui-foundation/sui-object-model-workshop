@@ -10,10 +10,7 @@
   },
   "scripts": {
     "init-keypair": "ts-node src/init.ts",
-    "create-vault": "ts-node src/createVault.ts",
-    "list-vaults": "ts-node src/listVaults.ts",
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
+    "build": "tsc"
   },
   "dependencies": {
     "@mysten/sui": "^1.8.0",
