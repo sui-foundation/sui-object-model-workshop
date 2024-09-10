@@ -65,10 +65,10 @@ public fun new(ctx: &mut TxContext): NewObject {
   
 ```
 
-This is easy enough to do, but in most cases (if the object doesn't have the [`drop` ability](https://move-book.com/reference/abilities.html?highlight=drop#drop)), if the returned object is not handled properly, the transaction will fail. This is where some developers get stuck. 
+This is easy enough to do, but in most cases (when the object doesn't have the [`drop` ability](https://move-book.com/reference/abilities.html?highlight=drop#drop)), if the returned object is not handled properly, the transaction will fail.
 
-In this lesson, we will learn how to handle returned objects properly.
+In this lesson, you learn how to handle returned objects properly.
 
 ### Exercise
 
-View the contents [`banana.move`](./lessons/returning_objects/banana_without_display/sources/banana_without_display.move). There is a deployed instance of this package on the Sui blockchain. The address of the package is [`placeholder`](https://explorer.polymedia.app/address/${publicAddress}?network=testnet). Navigate to [`scripts/lessons/return_objects/exercise1.ts`](./scripts/src/lessons/return_objects/exercise.ts) and complete the exercise.
+View the contents [`banana.move`](./lessons/returning_objects/banana_without_display/sources/banana_without_display.move). There is a deployed instance of this package on the Sui blockchain. The address of the package is [`0xadfb946c8c887446d284dae80ac8501c02ec9b9157babb96ca884773bfbb7771`](https://suiscan.xyz/testnet/object/0xadfb946c8c887446d284dae80ac8501c02ec9b9157babb96ca884773bfbb7771/txs). Navigate to [`scripts/lessons/return_objects/exercise.ts`](./scripts/src/lessons/return_objects/exercise.ts) and complete the exercise.
