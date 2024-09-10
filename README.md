@@ -2,10 +2,15 @@
 
 When learning Sui Move, developers are encouraged to use best practices to utilize the Sui object model and ensure on-chain object composability. Developers learn to write composable move code in a timely manner, but struggle to verify their code by deploying and executing the functionality on chain. The key to mastering the Sui object model is to pair your Sui move development sessions with interacting with on-chain objects via PTBs (Programmable Transaction Blocks). This workshop will guide you through the process of writing Sui Move code, deploying it to the Sui blockchain, and interacting with on-chain objects via PTBs.
 
+# Table of Contents
+- [Sui Object Model Workshop](#sui-object-model-workshop)
+- [Table of Contents](#table-of-contents)
+- [Environment Setup](#environment-setup)
+- [Lessons](#lessons)
+  - [Handling Returned Objects](#handling-returned-objects)
+    - [Exercise](#exercise)
 
-# Lessons
-
-## Environment Setup
+# Environment Setup
 
 Before we start, we need to set up our environment.
 
@@ -16,6 +21,9 @@ yarn init-keypair
 ```
 
 This will generate and fund a new keypair for you to use in the workshop. Make sure not to use this keypair in any production environments.
+
+
+# Lessons
 
 ## Handling Returned Objects
 
