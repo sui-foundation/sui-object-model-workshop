@@ -10,7 +10,8 @@
   },
   "scripts": {
     "init-keypair": "ts-node src/init.ts",
-    "return-objects": "ts-node src/lessons/return_objects/exercise.ts"
+    "return-objects": "ts-node src/lessons/return_objects/exercise.ts",
+    "input-objects": "ts-node src/lessons/input_objects/exercise.ts"
   },
   "dependencies": {
     "@mysten/sui": "^1.8.0",
