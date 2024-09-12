@@ -91,9 +91,11 @@ public fun update_value(obj: &mut SimpleObject, new_value: u64) {
 
 public fun delete(obj: SimpleObject) {
   let SimpleObject {
-    id: _, 
+    id, 
     value: _,
   } = obj;
+
+  id.delete();
 }
 ```
 
