@@ -1,7 +1,6 @@
 module scavenger::vault {
 
   use sui::coin;
-  use sui::clock;
   use sui::balance;
   use sui::sui::SUI;
 
@@ -61,21 +60,24 @@ module scavenger::vault {
     
   }
 
-  public fun empty(vault: &mut Vault, admin_cap: AdminCap, ctx: &mut TxContext): coin::Coin<SUI> {
-    assert_valid_admin_cap(vault, &admin_cap);
+  public fun empty(vault: Vault, admin_cap: AdminCap, ctx: &mut TxContext): coin::Coin<SUI> {
+    assert_valid_admin_cap(&vault, &admin_cap);
 
     let AdminCap {
       id: admin_cap_id, 
       vault_id: _
     } = admin_cap;
-
     admin_cap_id.delete();
 
-    let vault_balance_value = vault.balance.value();
-    let new_coin = coin::from_balance(balance::split(&mut vault.balance, vault_balance_value), ctx);
+    let Vault {
+      id, 
+      balance,
+      withdrawal_amount: _,
+      code: _
+    } = vault;
+    id.delete();
 
-    new_coin
-
+    coin::from_balance(balance, ctx)
   }
 
   fun assert_valid_key_code(vault: &Vault, key: &key::Key) {
