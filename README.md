@@ -35,7 +35,7 @@ For example, avoid this:
 
 ```move
 
-public struct NewObject has key {
+public struct NewObject has key, store {
   id: UID
 }
 
@@ -53,7 +53,7 @@ Instead, do this:
 
 ```move
 
-public struct NewObject has key {
+public struct NewObject has key, store {
   id: UID
 }
 
